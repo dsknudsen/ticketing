@@ -23,7 +23,7 @@ const setup = async () => {
     userId: new mongoose.Types.ObjectId().toHexString(),
     version: 0,
     expiration: 'expire',
-    status: OrderStatus.Created, // This is not taking for git
+    status: OrderStatus.Created,
     ticket: { id: ticket.id, price: ticket.price },
   };
 
