@@ -2,6 +2,8 @@ import { natsWrapper } from './nats-wrapper';
 import { OrderCreatedListener } from './events/listeners/order-created-listener';
 
 const start = async () => {
+  console.log('Starting expiration service...');
+
   // Need to add checks for environment variables to make TS happy
   if (!process.env.NATS_URL) {
     throw new Error('NATS_URL must be defined');
