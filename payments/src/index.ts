@@ -6,7 +6,7 @@ import { OrderCreatedListener } from './events/listener/order-created-listener';
 import { OrderCancelledListener } from './events/listener/order-cancelled-listener';
 
 const start = async () => {
-  console.log('Starting payments service...');
+  console.log('Starting payments service......');
 
   // Need to add checks for environment variables to make TS happy
   if (!process.env.JWT_KEY) {
