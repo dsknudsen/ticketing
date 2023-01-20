@@ -1,0 +1,8 @@
+import { Subjects } from '@dsktickets/common';
+
+// Using the mockImplementation allows us to create tests around the function being called
+export const stripe = {
+  charges: {
+    create: jest.fn().mockResolvedValue({}),
+  },
+};
