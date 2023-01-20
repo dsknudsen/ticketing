@@ -1,6 +1,6 @@
 import { Message } from 'node-nats-streaming';
 import mongoose from 'mongoose';
-import { OrderCreatedEvent } from '@dsktickets/common';
+import { OrderCreatedEvent, OrderStatus } from '@dsktickets/common';
 import { natsWrapper } from '../../../nats-wrapper';
 import { OrderCreatedListener } from '../order-created-listener';
 import { Ticket } from '../../../model/ticket';
@@ -23,6 +23,7 @@ const setup = async () => {
     userId: new mongoose.Types.ObjectId().toHexString(),
     version: 0,
     expiration: 'expire',
+    status: OrderStatus.Created,
     ticket: { id: ticket.id, price: ticket.price },
   };
 
