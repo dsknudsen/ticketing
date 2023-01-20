@@ -6,6 +6,8 @@ import { OrderCreatedListener } from './events/listener/order-created-listener';
 import { OrderCancelledListener } from './events/listener/order-cancelled-event';
 
 const start = async () => {
+  console.log('Starting tickets service...');
+
   // Need to add checks for environment variables to make TS happy
   if (!process.env.JWT_KEY) {
     throw new Error('JWT secret key does not exist');
