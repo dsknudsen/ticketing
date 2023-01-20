@@ -8,6 +8,8 @@ import { ExpirationCompleteListener } from './events/listeners/expiration-comple
 import { PaymentCreatedListener } from './events/listeners/payment-created-listener';
 
 const start = async () => {
+  console.log('Starting orders service...');
+
   // Need to add checks for environment variables to make TS happy
   if (!process.env.JWT_KEY) {
     throw new Error('JWT secret key does not exist');
