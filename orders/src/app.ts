@@ -15,7 +15,8 @@ app.use(json());
 app.use(
   cookieSession({
     signed: false,
-    secure: false,
+    secure: process.env.NODE_ENV !== 'test',
+    // secure: false, - Used for external deployment as have no SSL setup
   })
 );
 

@@ -4,7 +4,8 @@ export default ({ req }) => {
   if (typeof window === 'undefined') {
     // We are on the server
     return axios.create({
-      baseURL: 'http://ticketing.confluencegroup.io/',
+      baseURL: 'http://ticketing.dev',
+      // baseURL: 'http://ticketing.confluencegroup.io/', - USED FOR EXTERNAL DEPLOYMENT
       headers: req.headers,
     });
   } else {
